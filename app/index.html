@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f4">
+  <title>Personal Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Personal Notes home"><span class="brand-mark">N</span><span>Personal Notes</span></a>
+      <button id="signout" class="quiet-button hidden" type="button">Sign out</button>
+    </header>
+    <section class="intro">
+      <p class="eyebrow">A little space for your thoughts</p>
+      <h1>Keep the notes<br><span>you want to keep.</span></h1>
+      <p class="lede">A simple private notebook, stored in your own AWS account.</p>
+    </section>
+    <section id="signedout" class="panel sign-in-panel">
+      <div class="panel-icon" aria-hidden="true">↗</div>
+      <div><h2>Your notebook is yours</h2><p>Sign in with your personal account to see and save your notes.</p></div>
+      <button id="signin" class="primary-button" type="button">Continue to sign in <span aria-hidden="true">→</span></button>
+      <p class="small-copy">Your notes are attached to your account and are not shared with other users.</p>
+    </section>
+    <section id="notebook" class="hidden">
+      <div class="section-heading"><div><p class="eyebrow">Your notebook</p><h2>A thought worth saving?</h2></div><span id="count" class="count-pill">0 notes</span></div>
+      <form id="noteform" class="composer"><label for="note">Write a note</label><textarea id="note" name="note" maxlength="500" rows="4" placeholder="Start with whatever is on your mind..." required></textarea><div class="composer-footer"><span id="message" role="status" aria-live="polite">Up to 500 characters</span><button class="primary-button" type="submit">Save note <span aria-hidden="true">↗</span></button></div></form>
+      <div id="notes" class="notes-list" aria-live="polite"></div>
+    </section>
+    <footer><span>Made for a quieter corner of the internet.</span><span>Private by design · Hosted on AWS</span></footer>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
