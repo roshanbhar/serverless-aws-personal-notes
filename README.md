@@ -65,7 +65,7 @@ Lambda logs are retained for 14 days and an alarm watches for function errors. D
 - `app/` - browser UI and Cognito authorization-code-with-PKCE flow.
 - `scripts/publish.ps1` - upload static assets and invalidate CloudFront.
 - `docs/aws-console-walkthrough.md` - step-by-step deployment and screenshot checklist.
-- `outputs/Serverless_AWS_Project_Guide_Final.docx` - Word walkthrough.
+- `docs/Serverless_AWS_Project_Guide.docx` - Word walkthrough.
 
 ## License
 
